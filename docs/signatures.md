@@ -1,0 +1,49 @@
+---
+sidebar_position: 5
+---
+
+# Signatures
+
+Following are the signatures of the functions based on the method of the route.
+
+## GET
+
+```jsx
+function({ param = {}, headers = {}, methodHead = false }) {}
+
+//...
+functionName.call({
+    param: {q: 'text'},
+    headers: {},
+    methodHead: true // incase you just want to send a HEAD request insted of GET
+}).then(async (r) => {
+    const res = await r.json()
+    // process....
+})
+```
+
+## POST
+
+```jsx
+function({ data = {}, headers = {}, param = {} }) {}
+
+//...
+functionName.call({
+    data: {name: 'some-name'},
+    headers: {
+        Authreziation: "Barer <token>"
+    },
+}).then(async (r) => {
+    const res = await r.json()
+    // process....
+})
+```
+In POST, PUT and PATCH we have a data object.
+
+:::danger[Caution]
+Please add the below meta-tag to your ```app.blade.php``` to resolve the CSRF issues for your post-routes.
+:::
+```html title="app.blade.php"
+<meta name="csrf" content="{{ csrf_token() }}">
+```
+
