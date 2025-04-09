@@ -45,3 +45,10 @@ export default defineConfig({
     },
 });
 ```
+
+:::danger[Caution]
+Please add the below meta-tag to your ```app.blade.php``` to resolve the CSRF issues for your post-routes.
+:::
+```html title="app.blade.php"
+<meta name="csrf" content="{{ csrf_token() }}">
+```
