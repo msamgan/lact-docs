@@ -33,7 +33,7 @@ export default function Home() {
     return (
         <Layout
             title={`Hello from ${siteConfig.title}`}
-            description="Description will go into a meta tag in <head />">
+            description="Laravel Actions | Access controller methods directly in your frontend <head />">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
