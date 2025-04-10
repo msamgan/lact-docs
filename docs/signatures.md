@@ -38,4 +38,4 @@ functionName.call({
     // process....
 })
 ```
-In POST, PUT and PATCH we have a data object.
+In ```POST```, ```PUT``` and ```PATCH``` we have a data object.

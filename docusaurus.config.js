@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
     title: 'Lact',
     tagline: 'Laravel Actions | Access controller methods directly in your frontend.\n',
-    favicon: 'img/favicon.ico',
+    favicon: 'img/favicon.ico.ico',
 
     // Set the production url of your site here
     url: 'https://getlact.com',
@@ -74,13 +74,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace it with your project's social card
-            image: 'img/docusaurus-social-card.jpg',
+            image: 'img/lact-logo.png',
             navbar: {
                 title: 'Lact',
-                /*logo: {
-                    alt: 'My Site Logo',
-                    src: 'img/logo.svg',
-                },*/
+                logo: {
+                    alt: 'lact logo',
+                    src: 'img/lact-logo.png',
+                },
                 items: [
                     {
                         type: 'docSidebar',
