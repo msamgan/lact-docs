@@ -9,11 +9,11 @@ Following are the signatures of the functions based on the method of the route.
 ## GET
 
 ```jsx
-function({ param = {}, headers = {}, methodHead = false }) {}
+function({ params = {}, headers = {}, methodHead = false }) {}
 
 //...
 functionName.call({
-    param: {q: 'text'},
+    params: {q: 'text'},
     headers: {},
     methodHead: true // incase you just want to send a HEAD request insted of GET
 }).then(async (r) => {
@@ -25,7 +25,7 @@ functionName.call({
 ## POST
 
 ```jsx
-function({ data = {}, headers = {}, param = {} }) {}
+function({ data = {}, headers = {}, params = {} }) {}
 
 //...
 functionName.call({

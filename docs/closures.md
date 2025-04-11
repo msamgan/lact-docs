@@ -17,7 +17,7 @@ import { dashboardData } from '@actions/Closures';
 
 //...
 dashboardData.call({
-    param: {
+    params: {
         q: 'Amber',
     },
 }).then(async (r) => {

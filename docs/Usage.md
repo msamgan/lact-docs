@@ -30,17 +30,19 @@ public function dashboardData(Request $request)
 
 Apart from ```method```, you can also pass the following params as per your requirement in ```#[Action]```
 
-- (string) ```method```: get | post | patch | put |delete
+- (string) ```method```: get | post | patch | put |delete (default is 'get' if not provided)
+- (string) ```path```: path of the route. (e.g., path: '/user/store')
 - (string) ```name```: name of the route. (e.g., name: 'user.store')
 - (array) ```params```: array off all the url params, in same order as you want in URL. (e.g., params: ['user'])
 - (array) ```middleware```: array of all the middleware you want to apply in the route. (e.g.,
-  middleware: ['auth', 'verified'])
+  middleware: ['auth', 'verified']).
+  The package adds ```web``` by default.
 
 ```php title="E.g."
 use Msamgan\Lact\Attributes\Action;
 
 // highlight-next-line
-#[Action(method: 'post', params: ['user'], name: 'user.update', middleware: ['auth', 'verified'])]
+#[Action(method: 'post', path: "user/update", params: ['user'], name: 'user.update', middleware: ['auth', 'verified'])]
 public function update(User $user, Request $request)
 {
     // process...
@@ -48,10 +50,31 @@ public function update(User $user, Request $request)
 
 // the route for the above function will translate to
 //  Route::post(
-//        '85906367-216d-4f44-b463-4c3508478b52/{user}', 
+//        'user/update/{user}', 
 //        [App\Http\Controllers\DashboardController::class, 'update']
 //  )->name('user.update')
-//   ->middleware(['auth','verified'])
+//   ->middleware(['web', auth','verified'])
+//   ->prefix('action');
+```
+
+:::tip
+All the arguments in the attributes are optional with defaults.
+:::
+
+```php
+// highlight-next-line
+#[Action()]
+public function index()
+{
+    // process...
+}
+
+// the route for the above function will translate to
+//  Route::get(
+//        '85906456-216d-4f44-f456-4c3508478b52', 
+//        [App\Http\Controllers\DashboardController::class, 'index']
+//  )->name('dashboard.index')
+//   ->middleware(['web'])
 //   ->prefix('action');
 ```
 
@@ -106,3 +129,7 @@ but still, if you feel the need to generate the definition for the functions, yo
 ```bash
 php artisan lact:build-actions
 ```
+
+:::tip
+In some instances the autogenerate takes some time, please run the above command for manual definition generation. 
+:::
