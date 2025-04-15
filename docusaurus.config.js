@@ -22,8 +22,8 @@ const config = {
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'msamgan', // Usually your GitHub org/user name.
+    projectName: 'lact', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -43,10 +43,6 @@ const config = {
             ({
                 docs: {
                     sidebarPath: './sidebars.js',
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: {
                     showReadingTime: true,
@@ -54,10 +50,6 @@ const config = {
                         type: ['rss', 'atom'],
                         xslt: true,
                     },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',
@@ -74,6 +66,18 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace it with your project's social card
+            announcementBar: {
+                id: 'support_us',
+                content:
+                    '🙌 Hey Laravel devs! If you find LACT helpful, please consider giving it a ⭐ on GitHub – <a target="_blank" rel="noopener noreferrer" href="https://github.com/msamgan/lact">your support means a lot!</a>',
+                backgroundColor: 'black',
+                textColor: 'white',
+                isCloseable: false,
+            },
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: true,
+            },
             image: 'img/lact-logo.png',
             navbar: {
                 // title: 'Lact',
@@ -86,15 +90,23 @@ const config = {
                         type: 'docSidebar',
                         sidebarId: 'tutorialSidebar',
                         position: 'left',
-                        label: 'Docs',
+                        html: '<b>Docs</b>',
+                    },
+                    {
+                        sidebarId: 'contributors',
+                        position: 'left',
+                        html: '<b>Contributors</b>',
+                        href: 'https://github.com/msamgan/lact/graphs/contributors',
                     },
                     /* {to: '/blog', label: 'Blog', position: 'left'},*/
                     {
                         href: 'https://github.com/msamgan/lact',
-                        label: 'GitHub',
+                        html: '<img src="/img/github-mark-white.png" alt="github" width="30" />',
                         position: 'right',
                     },
                 ],
+                hideOnScroll: true,
+                style: 'dark',
             },
             footer: {
                 style: 'dark',
@@ -142,7 +154,7 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Lact`,
             },
             prism: {
-                theme: prismThemes.github,
+                theme: prismThemes.dracula,
                 darkTheme: prismThemes.dracula,
                 additionalLanguages: ['php', 'bash']
             },
