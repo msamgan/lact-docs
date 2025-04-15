@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Lact',
-    tagline: 'Laravel Actions | Access controller methods directly in your frontend.\n',
+    tagline: 'Access controller methods directly in your frontend.',
     favicon: 'img/favicon.ico.ico',
 
     // Set the production url of your site here
@@ -76,7 +76,7 @@ const config = {
             // Replace it with your project's social card
             image: 'img/lact-logo.png',
             navbar: {
-                title: 'Lact',
+                // title: 'Lact',
                 logo: {
                     alt: 'lact logo',
                     src: 'img/lact-logo.png',
@@ -86,7 +86,7 @@ const config = {
                         type: 'docSidebar',
                         sidebarId: 'tutorialSidebar',
                         position: 'left',
-                        label: 'Documentation',
+                        label: 'Docs',
                     },
                     /* {to: '/blog', label: 'Blog', position: 'left'},*/
                     {

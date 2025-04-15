@@ -1,10 +1,9 @@
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import Heading from '@theme/Heading';
+// import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -12,15 +11,15 @@ function HomepageHeader() {
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container">
-                <img className={styles.heroLogo} src={require('@site/static/img/lact-logo.png').default} alt="hero__image" />
-                <Heading as="h1" className="hero__title">
+                <img src={require('@site/static/img/lact-banner.png').default} alt="hero__image"/>
+                {/*<Heading as="h1" className="hero__title">
                     {siteConfig.title}
                 </Heading>
-                <p className="hero__subtitle">{siteConfig.tagline}</p>
+                <p className="hero__subtitle">{siteConfig.tagline}</p>*/}
                 {/*<div className={styles.buttons}>
                     <Link
                         className="button button--secondary button--lg"
-                        to="/docs/intro">
+                        to="/docs/intro">lact-banner.png
                         Lets get started
                     </Link>
                 </div>*/}
