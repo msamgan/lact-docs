@@ -100,6 +100,7 @@ const config = {
                     },
                     /* {to: '/blog', label: 'Blog', position: 'left'},*/
                     {
+                        sidebarId: 'github',
                         href: 'https://github.com/msamgan/lact',
                         html: '<img src="/img/github-mark-white.png" alt="github" width="30" />',
                         position: 'right',

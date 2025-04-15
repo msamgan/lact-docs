@@ -51,17 +51,24 @@ function Feature({Svg, title, description}) {
 
 export default function HomepageFeatures() {
     return (
-        <section className={styles.features}>
-            <div className="container">
-                <div className={styles.flex}>
-                    <img src={require('@site/static/img/banner-hero.png').default} alt="Backend"/>
+        <>
+            <section className={styles.features} style={{background: "#141818"}}>
+                <div className="container">
+                    <div className={styles.flex}>
+                        <img src={require('@site/static/img/banner-hero.png').default} alt="Backend"/>
+                    </div>
                 </div>
-                <div className="row">
-                    {FeatureList.map((props, idx) => (
-                        <Feature key={idx} {...props} />
-                    ))}
+            </section>
+
+            <section className={styles.features}>
+                <div>
+                    <div className="row">
+                        {FeatureList.map((props, idx) => (
+                            <Feature key={idx} {...props} />
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 }
