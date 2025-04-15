@@ -26,6 +26,7 @@ into your application.
 ```js title="vite.config.js"
 import {run} from "vite-plugin-run";
 import {resolve} from 'node:path';
+import { lactPreBuild } from './vendor/msamgan/lact/resources/methods';
 
 export default defineConfig({
     plugins: [
@@ -33,10 +34,11 @@ export default defineConfig({
         run([
             {
                 name: "lact",
-                run: ["php", "artisan", "lact:build-actions"],
+                run: ["php", "artisan", "lact:run"],
                 pattern: ["routes/**/*.php", "app/**/Http/Controllers/**/*.php"],
             },
         ]),
+        lactPreBuild()
     ],
     resolve: {
         alias: {

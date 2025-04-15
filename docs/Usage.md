@@ -127,7 +127,7 @@ all the definitions will be generated auto
 but still, if you feel the need to generate the definition for the functions, you can do it by the following command.
 
 ```bash
-php artisan lact:build-actions
+php artisan lact:run
 ```
 
 :::tip
