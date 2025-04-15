@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <Layout
             title={`Hello from ${siteConfig.title}`}
-            description="Access controller methods directly in your frontend <head />">
+            description="Access controller methods directly in your frontend">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
