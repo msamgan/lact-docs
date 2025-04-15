@@ -54,8 +54,7 @@ export default function HomepageFeatures() {
         <section className={styles.features}>
             <div className="container">
                 <div className={styles.flex}>
-                    <img src={require('@site/static/img/back.png').default} alt="Backend"/>
-                    <img src={require('@site/static/img/front.png').default} alt="Frontend"/>
+                    <img src={require('@site/static/img/banner-hero.png').default} alt="Backend"/>
                 </div>
                 <div className="row">
                     {FeatureList.map((props, idx) => (
