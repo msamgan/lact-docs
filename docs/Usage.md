@@ -101,11 +101,15 @@ Once you add the prefix, the urls of the routes will be changed. In case you are
 ```jsx
 import { functionName } from '@actions/ControllerName';
 
-// ...
+// this will return the entier fetch promois, with all status and headers etc...
 functionName.call({}).then(async (r) => {
   const res = await r.json()
   // process....
 })
+
+// this will just return the json response from the call.
+// this fuction will only be availabe in 'GET' methods.
+await functionName.data({})
 
 functionName.route()
 // /path
