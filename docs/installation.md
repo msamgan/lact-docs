@@ -43,7 +43,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@actions': resolve(__dirname, 'vendor/msamgan/lact/resources/action'),
+            '@actions': resolve(__dirname, 'vendor/msamgan/lact/resources/actions'),
         },
     },
 });
