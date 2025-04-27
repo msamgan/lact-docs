@@ -34,6 +34,7 @@ export default defineConfig({
         run([
             {
                 name: "lact",
+                build: false,
                 run: ["php", "artisan", "lact:run"],
                 pattern: ["routes/**/*.php", "app/**/Http/Controllers/**/*.php"],
             },
@@ -50,6 +51,7 @@ export default defineConfig({
 
 :::danger[Caution]
 Please add the below meta-tag to your ```app.blade.php``` to resolve the CSRF issues for your post-routes.
+As suggested by the [laravel docs](https://laravel.com/docs/12.x/csrf#csrf-x-csrf-token).
 :::
 ```html title="app.blade.php"
 <meta name="csrf" content="{{ csrf_token() }}">

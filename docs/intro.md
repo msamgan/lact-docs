@@ -34,6 +34,5 @@ Contributions and feedback are welcome to help grow the ecosystem.
 
 ## What you'll need
 
-- [Node.js version 18.0](https://nodejs.org/en/download/) or above: When installing Node.js, you’re recommended to check all checkboxes related to dependencies.
-- The route function from [ziggy](https://github.com/tighten/ziggy) is a dependency. Though it comes by default installed with inertia setup, please make sure that it's installed.
-- Since the package is using ziggy, we rely on ```route name```, please make sure the routes you need translation in action shave a name. 
+- [`Node.js version 18.0`](https://nodejs.org/en/download/) or above: When installing Node.js, you’re recommended to check all checkboxes related to dependencies.
+- `php >= 8.2`
